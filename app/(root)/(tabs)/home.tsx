@@ -10,6 +10,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useEffect, useState } from 'react';
 import * as Location from 'expo-location';
+import { router } from 'expo-router';
 
 import RideCard from '@/components/RideCard';
 import GoogleTextInput from '@/components/GoogleTextInput';
@@ -132,7 +133,16 @@ export default function Page() {
   const loading = true;
 
   const signOut = () => {};
-  const handleDestinationPress = () => {};
+
+  const handleDestinationPress = (location: {
+    latitude: number;
+    longitude: number;
+    address: string;
+  }) => {
+    setDestinationLocation(location);
+
+    router.push('/(root)/find-ride');
+  };
 
   useEffect(() => {
     const requestLocation = async () => {
