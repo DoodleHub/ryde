@@ -7,9 +7,9 @@ import { ReactNativeModal } from 'react-native-modal';
 import InputField from '@/components/InputField';
 import CustomButton from '@/components/CustomButton';
 import OAuth from '@/components/OAuth';
+import { fetchAPI } from '@/lib/fetch';
 
 import { icons, images } from '@/constants';
-import { fetchAPI } from '@/lib/fetch';
 
 const SignUp = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
