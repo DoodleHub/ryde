@@ -4,9 +4,9 @@ import { Link } from 'expo-router';
 
 import InputField from '@/components/InputField';
 import CustomButton from '@/components/CustomButton';
+import OAuth from '@/components/OAuth';
 
 import { icons, images } from '@/constants';
-import OAuth from '@/components/OAuth';
 
 const SignUp = () => {
   const [form, setForm] = useState({
